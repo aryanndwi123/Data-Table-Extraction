@@ -1,0 +1,31 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extracted Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-center py-12 text-2xl text-gray-600 font-bold">
+        Extracted Data
+      </h1>
+      <table class="w-full text-sm text-left text-gray-800 text-center">
+        <thead class="text-gray-900 uppercase bg-gray-50 divide-y-1">
+          <tr>
+            <th scope="col" class="px-6 py-3 border-r">Key</th>
+            <th scope="col" class="px-6 py-3">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in data %}
+          <tr class="border-b font-medium">
+            <td class="px-6 py-4 border-r">{{item.Key}}</td>
+            <td class="px-6 py-4">{{item.Value}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
